@@ -1,0 +1,11 @@
+%Y(n)-0.8Y(n-1)+0.64Y(n-2)=0.866x(n)
+%ÇóÁã×´Ì¬½×Ô¾ÏìÓ¦
+a1=[1,-0.8,0.64];
+b1=[0.866];
+n=0:100;
+x1=ones(1,101);
+pulse=filter(b1,a1,x1);
+stem(n,pulse); 
+title('steppulse');
+xlabel('n');
+ylabel('S'); 

@@ -1,0 +1,11 @@
+%Y(n)-0.8Y(n-1)+0.64Y(n-2)=0.866x(n)
+%求单位脉冲响应
+a1=[1,-0.8,0.64];
+b1=[0.866];
+n=0:49;
+x1=[1,zeros(1,49)];
+pulse=filter(b1,a1,x1);
+stem(n,pulse); 
+title('pulse');
+xlabel('n');
+ylabel('h'); 
